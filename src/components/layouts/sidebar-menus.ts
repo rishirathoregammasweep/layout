@@ -1,16 +1,4 @@
-import {
-  House,
-  User02Icon,
-  Users,
-  Database,
-  Activity,
-  Megaphone,
-  Calendar,
-  Settings,
-  BarChart,
-  Lightning,
-  Mail01Icon,
-} from "@hugeicons/core-free-icons"
+import { House, Settings } from "@hugeicons/core-free-icons"
 
 export const sidebarMenus = [
   {

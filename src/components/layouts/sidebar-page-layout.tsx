@@ -38,7 +38,6 @@ import {
   PanelLeft,
   ShareIcon,
   SidebarLeftIcon,
-  UnfoldMoreIcon,
 } from "@hugeicons/core-free-icons"
 import { settingsSidebarMenu } from "./setting-sidebar-menus"
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card"
@@ -275,47 +274,6 @@ function FooterAvatar() {
   )
 }
 
-function SvgIcon() {
-  return (
-    <svg
-      className="shrink-0"
-      fill="none"
-      height="48"
-      viewBox="0 0 35 48"
-      width="35"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g clipRule="evenodd" fill="#2563eb" fillRule="evenodd">
-        <path d="m34.6416 14v8.0492h-9.9697v-2.2927z" />
-        <path
-          d="m34.6394 14.0001-9.9697 5.7565-7.3513-4.2436v-11.513z"
-          opacity=".9"
-        />
-        <path
-          d="m17.3207 4v11.513l-7.34902 4.2436-9.96972688-5.7565z"
-          opacity=".8"
-        />
-        <path
-          d="m9.96973 19.7565v8.4868l-9.96973 5.756v-19.9993z"
-          opacity=".7"
-        />
-        <path
-          d="m17.3187 32.4871v11.5129l-17.3187-10.0006 9.96973-5.756z"
-          opacity=".6"
-        />
-        <path
-          d="m34.6394 33.9994-17.321 10.0006v-11.5129l7.3513-4.2437z"
-          opacity=".5"
-        />
-        <path
-          d="m34.6416 25.9507v8.0487l-9.9697-5.756v-2.2927z"
-          opacity=".4"
-        />
-      </g>
-    </svg>
-  )
-}
-
 const workspaces = [
   { id: "acme", name: "Acme Corp", slug: "acme-corp" },
   { id: "growth", name: "Growth Plan", slug: "growth-plan" },
@@ -324,30 +282,6 @@ const workspaces = [
 ] as const
 
 type WorkspaceId = (typeof workspaces)[number]["id"]
-
-function WorkspaceIcon({ className }: { className?: string }) {
-  return (
-    <div
-      className={cn(
-        "flex size-6 shrink-0 items-center justify-center overflow-hidden [&_svg]:h-full [&_svg]:w-auto",
-        className
-      )}
-    >
-      <SvgIcon />
-    </div>
-  )
-}
-
-function WorkspaceRadioIndicator() {
-  return (
-    <span
-      aria-hidden
-      className="flex size-4 shrink-0 items-center justify-center rounded-full border border-input group-data-[state=checked]/workspace-radio:border-primary group-data-[state=checked]/workspace-radio:bg-primary"
-    >
-      <span className="size-2 scale-0 rounded-full bg-primary-foreground transition-transform group-data-[state=checked]/workspace-radio:scale-100" />
-    </span>
-  )
-}
 
 function WorkspaceSwitcher() {
   const [workspaceId, setWorkspaceId] = useState<WorkspaceId>(workspaces[0].id)

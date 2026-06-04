@@ -28,6 +28,7 @@ import NotificationSettingsPage from "@/pages/settings/pages/notification/page"
 import IntegrationsSettingsPage from "@/pages/settings/pages/integrations/page"
 import AttributesSettingsPage from "@/pages/settings/pages/attributes/page"
 import MembersSettingsPage from "@/pages/settings/pages/members/page"
+import GeneralSettingsPage from "@/pages/settings/pages/general-settings/page"
 import TriggersPage from "@/pages/triggers/page"
 import TemplatesPage from "@/pages/templates/page"
 import UsersPage from "@/pages/users/page"
@@ -45,9 +46,19 @@ function PageTitle({ title }: { title: string }) {
   )
 }
 
-const routeElements: Partial<
-  Record<(typeof sidebarMenus)[number]["path"], ReactNode>
-> = {
+type MainRoutePath =
+  | "/dashboard"
+  | "/analytics"
+  | "/users"
+  | "/players"
+  | "/segments"
+  | "/events"
+  | "/campaigns"
+  | "/journeys"
+  | "/triggers"
+  | "/templates"
+
+const routeElements: Record<MainRoutePath, ReactNode> = {
   "/dashboard": <DashboardPage />,
   "/analytics": <AnalyticsPage />,
   "/users": <UsersPage />,
@@ -62,6 +73,7 @@ const routeElements: Partial<
 
 const settingsRouteElements = {
   "/settings/profile": <SettingsProfilePage />,
+  "/settings/general": <GeneralSettingsPage />,
   "/settings/appearance": <AppearanceSettingsPage />,
   "/settings/webhooks": <WebhookSettingsPage />,
   "/settings/api-key": <ApiKeySettingsPage />,
