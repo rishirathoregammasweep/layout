@@ -1,7 +1,9 @@
 import {
   ApiIcon,
+  ChatSpark01FreeIcons,
   ColorsIcon,
   CreditCardIcon,
+  Database01Icon,
   DatabaseIcon,
   MegaphoneIcon,
   Notification01Icon,
@@ -27,6 +29,27 @@ export const settingsSidebarMenu = [
     path: "/settings/general",
     heading: "General Settings",
     description: "Manage your general settings and preferences.",
+  },
+  {
+    title: "AI",
+    icon: ChatSpark01FreeIcons,
+    path: "/settings/ai",
+    heading: "AI",
+    description: "Configure default models, skills, and assistant behavior.",
+  },
+  {
+    title: "Security",
+    icon: ShieldIcon,
+    path: "/settings/security",
+    heading: "Security",
+    description: "Manage authentication, access control, and security settings.",
+  },
+  {
+    title: "Data Models",
+    icon: Database01Icon,
+    path: "/settings/data-models",
+    heading: "Data Models",
+    description: "Manage your data models and schemas.",
   },
   {
     title: "Appearance",
@@ -69,13 +92,6 @@ export const settingsSidebarMenu = [
     path: "/settings/billing",
     heading: "Billing",
     description: "View usage, invoices, and manage your subscription.",
-  },
-  {
-    title: "Security",
-    icon: ShieldIcon,
-    path: "/settings/security",
-    heading: "Security",
-    description: "Manage authentication, access control, and security settings.",
   },
   {
     title: "Notifications",

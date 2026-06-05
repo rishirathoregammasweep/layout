@@ -29,6 +29,8 @@ import IntegrationsSettingsPage from "@/pages/settings/pages/integrations/page"
 import AttributesSettingsPage from "@/pages/settings/pages/attributes/page"
 import MembersSettingsPage from "@/pages/settings/pages/members/page"
 import GeneralSettingsPage from "@/pages/settings/pages/general-settings/page"
+import DataModelsPage from "@/pages/settings/pages/data-models/page"
+import AiSettingsPage from "@/pages/settings/pages/ai/page"
 import TriggersPage from "@/pages/triggers/page"
 import TemplatesPage from "@/pages/templates/page"
 import UsersPage from "@/pages/users/page"
@@ -74,6 +76,8 @@ const routeElements: Record<MainRoutePath, ReactNode> = {
 const settingsRouteElements = {
   "/settings/profile": <SettingsProfilePage />,
   "/settings/general": <GeneralSettingsPage />,
+  "/settings/ai": <AiSettingsPage />,
+  "/settings/data-models": <DataModelsPage />,
   "/settings/appearance": <AppearanceSettingsPage />,
   "/settings/webhooks": <WebhookSettingsPage />,
   "/settings/api-key": <ApiKeySettingsPage />,
