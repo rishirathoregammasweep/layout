@@ -31,15 +31,6 @@ export default function BrandChannelsSettingsPage() {
 
   return (
     <div className="mx-start max-w-xl space-y-6">
-      <div className="space-y-2">
-        <h2 className="text-lg font-semibold tracking-tight">Brand channels</h2>
-        <p className="text-muted-foreground max-w-2xl text-sm leading-relaxed">
-          Set how your workspace appears on outbound email, SMS, and push. These
-          defaults apply to campaigns and journeys unless you override them per
-          send.
-        </p>
-      </div>
-
       <form onSubmit={handleSubmit} className="space-y-0">
         <section className="space-y-4 pb-8" aria-labelledby={`${formId}-email-heading`}>
           <div className="space-y-1">

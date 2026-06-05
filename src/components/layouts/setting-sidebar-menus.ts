@@ -107,13 +107,6 @@ export const settingsSidebarMenu = [
     heading: "Integrations",
     description: "Connect third-party services and manage integrations.",
   },
-  {
-    title: "Attributes",
-    icon: DatabaseIcon,
-    path: "/settings/attributes",
-    heading: "Attributes",
-    description: "Define and manage custom attributes and metadata.",
-  },
 ] as const
 
 export type SettingsSidebarPath = (typeof settingsSidebarMenu)[number]["path"]
