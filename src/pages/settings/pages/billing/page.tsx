@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { Card, CardHeader, CardFooter, CardTitle, CardDescription } from "@/components/ui/card"
+import { Avatar, AvatarGroup, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Separator } from "@/components/ui/separator"
 import {
   Table,
@@ -33,7 +35,7 @@ const INVOICES = [
 
 export default function BillingSettingsPage() {
   return (
-    <div className="mx-start max-w-xl space-y-8">
+    <div className="mx-start max-w-2xl space-y-8">
       <div className="space-y-2">
         <h2 className="text-lg font-semibold tracking-tight">Billing</h2>
         <p className="text-muted-foreground max-w-2xl text-sm leading-relaxed">
@@ -130,6 +132,47 @@ export default function BillingSettingsPage() {
         <Button type="button" variant="outline" size="sm">
           Edit billing email
         </Button>
+      </section>
+
+      <Separator />
+
+      <section className="space-y-4" aria-labelledby="billing-contact-heading">
+        <h3
+          id="billing-contact-heading"
+          className="text-base font-semibold tracking-tight"
+        >
+          Different Plans
+        </h3>
+        <p className="text-muted-foreground text-sm leading-relaxed">
+          Choose a plan that fits your needs.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+
+        <Card>
+            <CardHeader>
+              <div className="flex items-center gap-2">
+                <CardTitle>Starter Plan</CardTitle>
+              </div>
+              <CardDescription>Get started with a simple, cost-effective solution for your business.</CardDescription>
+            </CardHeader>
+            <CardFooter className="gap-2">
+              <Button variant="outline">Upgrade</Button>
+            </CardFooter>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <div className="flex items-center gap-2">
+                <CardTitle>Enterprise Plan</CardTitle>
+              </div>
+              <CardDescription>Unlock all features and grow your business with confidence.</CardDescription>
+            </CardHeader>
+            <CardFooter className="gap-2">
+              <Button variant="outline">Upgrade</Button>
+            </CardFooter>
+          </Card>
+        </div>
       </section>
 
       <Separator />

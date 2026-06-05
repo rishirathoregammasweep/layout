@@ -32,25 +32,6 @@ function FieldHeading({
   )
 }
 
-function Breadcrumb() {
-  return (
-    <nav
-      aria-label="Breadcrumb"
-      className="text-muted-foreground mb-6 flex flex-wrap items-center gap-1.5 text-sm"
-    >
-      <Link
-        to="/settings/profile"
-        className="hover:text-foreground transition-colors"
-      >
-        User
-      </Link>
-      <span aria-hidden className="text-muted-foreground/80">
-        /
-      </span>
-      <span className="text-foreground font-medium">Profile</span>
-    </nav>
-  )
-}
 
 export default function ProfileSettings() {
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -113,12 +94,8 @@ export default function ProfileSettings() {
   )
 
   return (
-    <div className="mx-0 max-w-xl space-y-0 pb-12">
-      <Breadcrumb />
-
-      <h1 className="text-2xl font-semibold tracking-tight">Profile</h1>
-
-      <div className="mt-8 space-y-10">
+    <div className="mx-0 max-w-xl space-y-0 ">
+      <div className="space-y-10">
         <section className="space-y-4">
           <FieldHeading title="Picture" />
           <div className="flex flex-col gap-4 sm:flex-row sm:items-start">

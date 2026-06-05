@@ -1,4 +1,4 @@
-import { House, Settings } from "@hugeicons/core-free-icons"
+import { House, Settings, StarsIcon } from "@hugeicons/core-free-icons"
 
 export const sidebarMenus = [
   {
@@ -7,6 +7,13 @@ export const sidebarMenus = [
     path: "/dashboard",
     heading: "Dashboard",
     description: "Overview of activity and key metrics across your workspace.",
+  },
+  {
+    title: "Reviews",
+    icon: StarsIcon,
+    path: "/reviews",
+    heading: "Reviews",
+    description: "View and manage your reviews.",
   },
   {
     title: "Settings",

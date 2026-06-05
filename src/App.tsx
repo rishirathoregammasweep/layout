@@ -39,6 +39,7 @@ import SignupPage from "@/pages/signup/page"
 import OnboardingPage from "./pages/onboarding/page"
 import PlayerDetailsPage from "@/pages/player-details/page"
 import CampaignDetailsPage from "@/pages/campaign-details/page"
+import ReviewsPage from "@/pages/reviews/page"
 
 function PageTitle({ title }: { title: string }) {
   return (
@@ -50,6 +51,7 @@ function PageTitle({ title }: { title: string }) {
 
 type MainRoutePath =
   | "/dashboard"
+  | "/reviews"
   | "/analytics"
   | "/users"
   | "/players"
@@ -62,6 +64,7 @@ type MainRoutePath =
 
 const routeElements: Record<MainRoutePath, ReactNode> = {
   "/dashboard": <DashboardPage />,
+  "/reviews": <ReviewsPage />,
   "/analytics": <AnalyticsPage />,
   "/users": <UsersPage />,
   "/players": <PlayerPage />,
