@@ -7,7 +7,7 @@ const Page = () => {
         <div className='grid grid-cols-3 gap-2'>
             {
                 Array.from({ length: 3 }).map((_, index) => (
-                    <ChartAreaGradient />
+                    <ChartAreaGradient key={index} />
                 ))
             }
         </div>

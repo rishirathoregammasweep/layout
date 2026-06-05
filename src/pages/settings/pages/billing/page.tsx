@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardHeader, CardFooter, CardTitle, CardDescription } from "@/components/ui/card"
-import { Avatar, AvatarGroup, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Separator } from "@/components/ui/separator"
 import {
   Table,

@@ -1,19 +1,11 @@
-import { useState } from "react"
 import {
   ArrowRight,
-  Clock01Icon,
   EncryptFreeIcons,
-  FileSearchIcon,
-  HotTubeIcon,
-  Key01Icon,
   KeyIcon,
   LinkIcon,
-  LockIcon,
   PasswordValidationIcon,
-  ShieldIcon,
 } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
   Field,
@@ -35,10 +27,6 @@ import { Switch } from "@/components/ui/switch"
 import { googleIcon, microsoftIcon } from "@/assets/svg"
 
 export default function SecuritySettingsPage() {
-  const [requireMfa, setRequireMfa] = useState(true)
-  const [ssoEnforced, setSsoEnforced] = useState(false)
-  const [auditExports, setAuditExports] = useState(true)
-
   return (
     <div className="max-w-2xl space-y-8 pb-12">
 
