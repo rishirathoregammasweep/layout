@@ -1,1 +1,0 @@
-export { DataModelsTable } from "./table"

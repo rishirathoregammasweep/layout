@@ -411,8 +411,8 @@ export function LayoutSidebar() {
 
   const isSettings = pathname.startsWith("/settings")
   const layoutColumns = isSettings
-    ? "minmax(0, 2fr) minmax(0, 4fr)"
-    : "minmax(0, 1fr) minmax(0, 5fr)"
+    ? "minmax(0, 2fr) minmax(0, 4fr) minmax(0, 2fr)"
+    : "minmax(0, 1fr) minmax(0, 5fr) minmax(0, 2fr)"
 
   return (
     <div
@@ -550,7 +550,6 @@ export function LayoutSidebar() {
                 </div>
               </div>
               <div className="flex shrink-0 items-center gap-1 pt-0.5">
-                <AiChat />
                 <Button variant={'secondary'} size={'lg'}>
                   <HugeiconsIcon icon={ShareIcon} strokeWidth={2} />
                   Share & Earn
@@ -562,6 +561,9 @@ export function LayoutSidebar() {
           ) : null}
           <Outlet />
         </div>
+      </div>
+
+      <div className="hidden h-full min-h-0 w-full md:col-span-1 md:flex">
       </div>
     </div>
   )
